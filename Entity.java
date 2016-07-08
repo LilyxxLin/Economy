@@ -4,28 +4,27 @@ public class Entity
 {  // do we want to make this class abstract
   private String name;
   private double totalAsset;
+  private double cash;
+  public static final String[] DICTIONARY = {"car", "book", "carrot"};
+  
   
   public Entity()
   {
     this.name = "";
-    this.totalAsset = 0.0;
+    this.cash = 0.0;
   }
   
-  public Entity(String name, double totalAsset)
+  public Entity(String name, double cash)
   {
       this.name = name;
-      this.totalAsset = totalAsset;
+      this.cash = cash;
   }
   
-  public void transactMoney(double amount)
-  {
-      this.totalAsset += amount;
-  }
   
   public String getName()
     return this.name;
   
-  public double getTotalAsset()
-    return this.totalAsset
+  public double getCash()
+    return this.cash;
 
 }
