@@ -1,20 +1,31 @@
 package WorldEconomy;
 
-public class Entity {  // do we want to make this class abstract
+public class Entity 
+{  // do we want to make this class abstract
   private String name;
-  //don't know if we want this: private double totalAsset;
-  private double cash;
-  private static final String[] DICTIONARY;
-
+  private double totalAsset;
   
-  //constructor??
-  
-  //accesor method
-  public double getCash(){
-    return cash;
+  public Entity()
+  {
+    this.name = "";
+    this.totalAsset = 0.0;
   }
   
-// transact method??
+  public Entity(String name, double totalAsset)
+  {
+      this.name = name;
+      this.totalAsset = totalAsset;
   }
+  
+  public void transactMoney(double amount)
+  {
+      this.totalAsset += amount;
+  }
+  
+  public String getName()
+    return this.name;
+  
+  public double getTotalAsset()
+    return this.totalAsset
 
-
+}
