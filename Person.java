@@ -5,18 +5,28 @@ import java.util.ArrayList;
 public class Person extends Entity{
 	private static int numPeople = 0;
 
-	private String name;
-	private ArrayList<Thing> thingArray;
+	//inherited from Entity: private String name;
+	private Thing[] thingArray;
 	private ArrayList<Account> accountArray; // account has money
-	private double cash;
+	//inherited from Entity private double cash;
 	// entity superclass??
 	
+	//Constructor
 	public Person(String n, double c){
 		name = n;
 		cash = c;
-		thingArray = new ArrayList<Thing>();
+		thingArray = {Car,Book,Carrot}; //the thing array is the same for all; do we want to construct all these classes??
 		accountArray = new ArrayList<Account>();
 		numPeople++;
+	}
+	
+	//buy method
+	public void buy(Entity from, String thingType, int quantity, Account accname){ //if accname == null then cash
+		
+	}
+	
+	deposit (Bank bankname, Account accname, double quantity){
+		
 	}
 
 	
