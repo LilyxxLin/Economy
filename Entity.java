@@ -33,5 +33,11 @@ public class Entity
   
   public double getCash()
     return this.cash;
+  
+  public void addCash(double amount)
+    cash += amount;
+  
+  public void subtractCash(double amount)
+    cash -= amount;
 
 }
