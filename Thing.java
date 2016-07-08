@@ -1,6 +1,6 @@
 package WorldEconomy;
 
-public class Thing {  // Cargo 还有什么别的characteristics 吗？？
+public class Thing {
 	private String name;
 	private double price;
 	private int quantity;
@@ -10,10 +10,8 @@ public class Thing {  // Cargo 还有什么别的characteristics 吗？？
 		price = p;
 		quantity = q;
 	}
-
-
-	public Thing() {
-		// TODO Auto-generated constructor stub
+	
+	public Thing() { // do we want a default at all??
 	}
 		
 	public double getPrice(){
