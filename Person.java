@@ -41,8 +41,15 @@ public class Person extends Entity{
 	
 	
 	//buy() method
-	public void buy(Entity from, String thingType, int quantity, Account accname){ //if accname == null then cash
-		if()
+	public void buy(Entity from, String thingType, double quantity, Account accname){ //if accname == null then cash
+		
+		if(enoughItem(thingType, quantity) && enoughMoney(accname, quantity))
+		{
+			if(accname == null)
+				
+		}
+		else
+			System.out.println("Error. Transaction could not be processed. Please try again!")
 		
 	}
 	
@@ -54,7 +61,7 @@ public class Person extends Entity{
 		
 	}
 	
-	public Account openAccount (Bank bankname, String accname, double initialDeposit){
+	public void openAccount (Bank bankname, String accname, double initialDeposit){
 		
 	}
 	
