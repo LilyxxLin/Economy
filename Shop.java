@@ -2,7 +2,7 @@ package WorldEconomy;
 
 import java.util.ArrayList;
 
-public class Shop {
+public class Shop extends Entity {
 	private static int totalNumShop = 0;
 	private String name;
 	private ArrayList<Thing> thingArray; // what about an arrayList of an arrayList???
