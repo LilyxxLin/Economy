@@ -45,7 +45,17 @@ public class Person extends Entity{
 		
 		if(enoughItem(thingType, quantity) && enoughMoney(accname, quantity))
 		{
+			int pricePaid = quantity * thingArray[getItemIndex(thingType)].getPrice();
 			if(accname == null)
+			{
+				this.subtractCash(pricePaid);
+				this.addCash(pricePaid)
+			}	
+			else //catch exception if accname is not valid
+			{
+				this.withdraw(pricePaid);
+				from.deposit(pricePaid);
+			}
 				
 		}
 		else
@@ -53,15 +63,20 @@ public class Person extends Entity{
 		
 	}
 	
-	public void deposit (Bank bankname, Account accname, double quantity){ // what is the appropriate return type?
-		
+	public void deposit (Account accname, double quantity){ // what is the appropriate return type?
+		accname.changeBalance(quantity);
 	}
 	
-	public void withdraw(Bank bankname, Account accname, double quantity){ //What is the appropriate return type>>
+	public void withdraw(Account accname, double quantity){
+		if(accname.getBalance - quantity) < 0)
+			System.out.println("Amount attempted to be withdrawn exceeds balance");
+		else
+			accname.changeBalance(quantity * -1);//What is the appropriate return type>>
 		
 	}
 	
 	public void openAccount (Bank bankname, String accname, double initialDeposit){
+		bankname.createAccount(accname, initialDeposit);
 		
 	}
 	
