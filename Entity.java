@@ -1,10 +1,11 @@
 package WorldEconomy;
 
-public class Entity {  // do we want to make this class abstract
+public class Entity 
+{  // do we want to make this class abstract
   private String name;
   private double totalAsset;
   
-  public Entity(String name, totalAsset)
+  public Entity(String name, double totalAsset)
   {
       this.name = name;
       this.totalAsset = totalAsset;
