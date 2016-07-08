@@ -3,7 +3,7 @@ package WorldEconomy;
 public class Entity 
 {  // do we want to make this class abstract
   private String name;
-  private double totalAsset;
+  //private double totalAsset;
   private double cash;
   public static final String[] DICTIONARY = {"car", "book", "carrot"};
   
