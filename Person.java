@@ -20,7 +20,15 @@ public class Person extends Entity{
 		numPeople++;
 	}
 	
-	//buy method
+	public boolean enoughMoney(String paymentMethod, double quantity){
+		
+	}
+	
+	public boolean enoughIten(String thing, double quantity){
+		
+	}
+	
+	//buy() method
 	public void buy(Entity from, String thingType, int quantity, Account accname){ //if accname == null then cash
 		
 	}
@@ -37,13 +45,7 @@ public class Person extends Entity{
 		
 	}
 	
-	public boolean enoughMoney(String paymentMethod, double quantity){
-		
-	}
-	
-	public boolean enoughIten(String thing, double quantity){
-		
-	}
+
 
 	
 }
