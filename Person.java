@@ -20,11 +20,17 @@ public class Person extends Entity{
 		numPeople++;
 	}
 	
-	public boolean enoughMoney(String paymentMethod, double quantity){
-		
+	
+	
+	public boolean enoughMoney(Account accname, double quantity){ // if accname==null, the check cash
+		if (accname == null){  // can do this/?
+			return super.getCash() >= quantity;
+		} else{  // find the account; return exception if account not; then compare the amount in the account
+			return accname.getQuantity()>=quantity;
+		}
 	}
 	
-	public boolean enoughIten(String thing, double quantity){
+	public boolean enoughItem(String thing, double quantity){
 		
 	}
 	
