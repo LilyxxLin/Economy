@@ -5,5 +5,6 @@ public class Bank extends Entity{  //implements Account??  // implements transac
 
 	private People[] customers;
 	private Account[] accounts;
+	
 }
 
