@@ -30,11 +30,10 @@ public class Person extends Entity{
 	}
 	
 	public boolean enoughItem(String thing, double quantity){
-		int itemIndex = Arrays.binarySearch (super.DICTIONARY, thing);
-		if (itemIndex>=0)  // if the item is found
-		{
+		int itemIndex = super.getItemIndex (thing);
+		if (itemIndex>=0){  // if the item is found
 			return Thing[itemIndex].getQuantity()>=quantity;
-		}else{ // that means Array.binarySearch can't find the given item in the dictionary
+		}else { // if getItemIndex returns -1;
 			System.out.println(this.getName()+ " does not have the item that you are looking for... sorry :(");
 			return false; // or prompt the user to retype???
 		}
