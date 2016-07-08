@@ -1,5 +1,5 @@
 package WorldEconomy;
-
+// do we want a transaction class?? NO
 public class Transaction {
 	
 	private Person buyer;
