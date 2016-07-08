@@ -8,14 +8,14 @@ public class Person extends Entity{
 	//inherited from Entity: private String name;
 	private Thing[] thingArray;
 	private ArrayList<Account> accountArray; // account has money
+	
 	// dictionary should be in superclass entity;
 	//inherited from Entity private double cash;
 
 	//Constructor
 	public Person(String n, double c){
-		name = n;
-		cash = c;
-		thingArray = {Car,Book,Carrot}; //the thing array is the same for all; do we want to construct all these classes??
+		super(n, c);
+		thingArray = {new Car(), new Book(), new Carrot()};
 		accountArray = new ArrayList<Account>();
 		numPeople++;
 	}
@@ -39,8 +39,10 @@ public class Person extends Entity{
 		}
 	}
 	
+	
 	//buy() method
 	public void buy(Entity from, String thingType, int quantity, Account accname){ //if accname == null then cash
+		if()
 		
 	}
 	
