@@ -20,6 +20,13 @@ public class Entity
       this.cash = cash;
   }
   
+  public int getItemIndex (String s) //returns index that corresponds to the string, and -1 if not found
+  {
+    for (int i = 0; i < DICTIONARY.length; i++)
+      if(s[i].toLowerCase().equals(s))
+        return i;
+    return -1;
+  }
   
   public String getName()
     return this.name;
