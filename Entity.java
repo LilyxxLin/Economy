@@ -4,8 +4,21 @@ public class Entity {  // do we want to make this class abstract
   private String name;
   private double totalAsset;
   
-  public void transactMoney(Person from, Person to){
-    
+  public Entity(String name, totalAsset)
+  {
+      this.name = name;
+      this.totalAsset = totalAsset;
   }
+  
+  public void transactMoney(double amount)
+  {
+      this.totalAsset += amount;
+  }
+  
+  public String getName()
+    return this.name;
+  
+  public double getTotalAsset()
+    return this.totalAsset
 
 }
