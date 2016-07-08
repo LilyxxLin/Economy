@@ -2,6 +2,12 @@ package WorldEconomy;
 
 public class Account {
 	private String ownerName;
-	private float amount;  // type currency??
+	private String accname;
+	private double quantity;  // type currency??
+	
+	//accessor method
+	public double getQuantity(){
+		return quantity;
+	}
 	
 }
