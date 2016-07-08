@@ -8,9 +8,9 @@ public class Person extends Entity{
 	//inherited from Entity: private String name;
 	private Thing[] thingArray;
 	private ArrayList<Account> accountArray; // account has money
+	// dictionary should be in superclass entity;
 	//inherited from Entity private double cash;
-	// entity superclass??
-	
+
 	//Constructor
 	public Person(String n, double c){
 		name = n;
@@ -19,7 +19,6 @@ public class Person extends Entity{
 		accountArray = new ArrayList<Account>();
 		numPeople++;
 	}
-	
 	
 	
 	public boolean enoughMoney(Account accname, double quantity){ // if accname==null, the check cash
@@ -31,7 +30,14 @@ public class Person extends Entity{
 	}
 	
 	public boolean enoughItem(String thing, double quantity){
-		
+		int itemIndex = Arrays.binarySearch (super.DICTIONARY, thing);
+		if (itemIndex>=0)  // if the item is found
+		{
+			return Thing[itemIndex].getQuantity()>=quantity;
+		}else{ // that means Array.binarySearch can't find the given item in the dictionary
+			System.out.println(this.getName()+ " does not have the item that you are looking for... sorry :(");
+			return false; // or prompt the user to retype???
+		}
 	}
 	
 	//buy() method
