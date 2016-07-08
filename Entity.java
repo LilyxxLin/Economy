@@ -5,6 +5,12 @@ public class Entity
   private String name;
   private double totalAsset;
   
+  public Entity()
+  {
+    this.name = "";
+    this.totalAsset = 0.0;
+  }
+  
   public Entity(String name, double totalAsset)
   {
       this.name = name;
