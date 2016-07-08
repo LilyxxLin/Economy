@@ -1,5 +1,5 @@
 package WorldEconomy;
 
-public class Carrot {
+public class Carrot extends Thing{
 
 }
