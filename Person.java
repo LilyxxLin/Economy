@@ -25,39 +25,25 @@ public class Person extends Entity{
 		
 	}
 	
-	deposit (Bank bankname, Account accname, double quantity){
+	public void deposit (Bank bankname, Account accname, double quantity){ // what is the appropriate return type?
+		
+	}
+	
+	public void withdraw(Bank bankname, Account accname, double quantity){ //What is the appropriate return type>>
+		
+	}
+	
+	public Account openAccount (Bank bankname, String accname, double initialDeposit){
+		
+	}
+	
+	public boolean enoughMoney(String paymentMethod, double quantity){
+		
+	}
+	
+	public boolean enoughIten(String thing, double quantity){
 		
 	}
 
 	
-	public void buyFromShop (Shop s, Thing t, String paymentMethod){ // payment: cash/ account
-		//boolean transactionDone = false;
-		// check availability
-		ArrayList<Thing> thingArrayOfShop = s.getThingArray();
-		int index = thingArrayOfShop.indexOf(t); //can I do this???
-		double quantityInShop = thingArrayOfShop.get(index).getQuantity();
-		//Thing thing = thingArray.get(index);  // any other way to do this??
-		boolean available = quantityInShop>=t.getQuantity();
-		// calculate cost
-		double cost = t.getPrice()*t.getQuantity();
-		//money --
-		
-		//thing++
-		if (paymentMethod.equals("Cash")){
-			//check money
-			boolean richEnough = this.cash>cost; 
-
-
-		}
-		else{ // if payment = account
-			//check money
-
-		}
-		// shop.sell()??
-		
-	}
-	// Constructor
-
-	
-	//
 }
