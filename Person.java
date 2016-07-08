@@ -2,7 +2,7 @@ package WorldEconomy;
 
 import java.util.ArrayList;
 
-public class Person {
+public class Person extends Entity{
 	private static int numPeople = 0;
 
 	private String name;
