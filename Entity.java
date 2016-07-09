@@ -32,16 +32,20 @@ public class Entity
     return -1;
   }
   
-  public String getName()
+  public String getName(){
     return this.name;
+  }
   
-  public double getCash()
+  public double getCash(){
     return this.cash;
+  }
   
-  public void addCash(double amount)
+  public void addCash(double amount){
     cash += amount;
+  }
   
-  public void subtractCash(double amount)
+  public void subtractCash(double amount){
     cash -= amount;
+  }
 
 }
