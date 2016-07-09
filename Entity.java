@@ -48,5 +48,10 @@ public class Entity
   public void subtractCash(double amount){
     cash -= amount;
   }
+  
+  public void exchangeItem(String thing, double quantity){
+	  int itemIndex = super.getItemIndex (thing);
+	  this.Thing[itemIndex].changeQuantity(double quantity)
+	}
 
 }
