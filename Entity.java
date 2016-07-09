@@ -1,4 +1,5 @@
 package WorldEconomy;
+import java.util.ArrayList;
 
 public class Entity 
 {  // do we want to make this class abstract
