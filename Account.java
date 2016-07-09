@@ -5,13 +5,27 @@ public class Account {
 	private String ownerName;
 	private String bankName;
 	private double quantity;  // type currency??
-	
+	private int idNumber;
+
 	//accessor methods
-	public double getQuantity()
+	public double getQuantity(){
 		return quantity;
-	public String getAccName()
+	}
+	public String getAccName(){
 		return accname;
-	public String getBankName()
+	}
+	public String getBankName(){
 		return bankName;
+	}
+	
+	//constructor method
+	public Account(String an, String on, String bn, double q, int id){
+	    accname = an;
+	    ownerName = on;
+	    bankName = bn;
+	    quantity = q;
+	    idNumber = id;
+	}
+
 	
 }
