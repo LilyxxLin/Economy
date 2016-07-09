@@ -6,7 +6,7 @@ public class Entity
   private String name;
   //private double totalAsset;
   private double cash;
-  private ArrayList<Account>;
+  // private ArrayList<Account> accountArray; do we really want this to be in entity??
   public static final String[] DICTIONARY = {"car", "book", "carrot"};
   
   
