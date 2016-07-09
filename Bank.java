@@ -1,4 +1,5 @@
 package WorldEconomy;
+import java.util.ArrayList;
 
 public class Bank extends Entity{  //implements Account??  // implements transactions
 	private static double totalMoney;
