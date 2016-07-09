@@ -48,8 +48,8 @@ public class Person extends Entity{
 			int pricePaid = quantity * thingArray[getItemIndex(thingType)].getPrice();
 			if(accname == null)
 			{
-				this.subtractCash(pricePaid);
-				this.addCash(pricePaid)
+				this.changeCash(pricePaid*-1);
+				from.changeCash(pricePaid)
 			}	
 			else //catch exception if accname is not valid
 			{
