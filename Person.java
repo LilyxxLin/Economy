@@ -76,8 +76,8 @@ public class Person extends Entity{
 	}
 	
 	public void openAccount (Bank bankname, String accname, double initialDeposit){
-		bankname.createAccount(accname, initialDeposit);
-		
+		Account newAcc = bankname.createAccount(accname, this.getName(), initialDeposit);
+		this.accountArray.add(newAcc);
 	}
 	
 
