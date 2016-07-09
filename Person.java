@@ -56,11 +56,10 @@ public class Person extends Entity{
 				this.withdraw(pricePaid);
 				from.deposit(pricePaid);
 			}
-				
-		}
-		else
+			from.exchangeItem(thingType, -quantity);  // these two lines change the quantity of the item of the buyer and seller;
+			this.exchangeItem(thingType, quantity); // ps. money has to be exchanged successfully before item is exchanged
+		}else
 			System.out.println("Error. Transaction could not be processed. Please try again!")
-		
 	}
 	
 	public void deposit (Account accname, double quantity){ // what is the appropriate return type?
