@@ -79,7 +79,4 @@ public class Person extends Entity{
 		this.accountArray.add(newAcc);
 	}
 	
-
-
-	
 }
