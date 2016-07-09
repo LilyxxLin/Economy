@@ -6,12 +6,18 @@ public class Shop extends Entity {
 	private static int totalNumShop = 0;
 	//private String name; inherited from Entity
 	private ArrayList<Thing> thingArray; // what about an arrayList of an arrayList???
-	private double totalAsset; // money or money+thing*Price
+	//private double totalAsset; // money or money+thing*Price
 	
-	public Shop(){
+	//constructor
+	public Shop(){ // if we only want one shop this is what it should look like??
+	    super.name = "The Awesome Shop!!";
+	    Car cars = new Car(10);
+	    Book books = new Book(20);
+	    Carrot carrots = new Carrot(100);
+	    thingArray. add(cars,books,carrots);
 		totalNumShop++;
 	}
-	
+	//accesor methods
 	public ArrayList<Thing> getThingArray(){
 		return thingArray;
 	}
@@ -25,6 +31,5 @@ public class Shop extends Entity {
 			return false; // or prompt the user to retype???
 		}
 	}
-	
 
 }
