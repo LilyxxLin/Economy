@@ -1,31 +1,44 @@
 package WorldEconomy;
 
 public class Account {
-	private String accname;
+	private int idNumber;
+	private String accName; // variable name, not field???
 	private String ownerName;
 	private String bankName;
-	private double quantity;  // type currency??
-	private int idNumber;
+	private double balance;  // type currency??? default unit: US dollar
 
-	//accessor methods
-	public double getQuantity(){
-		return quantity;
+	//accessors
+	public int getIDNumber(){
+		return idNumber
 	}
-	public String getAccName(){
+	public String getAccName(){ // unnecessary???
 		return accname;
+	}
+	public String getOwnerName(){
+		return ownerName;
 	}
 	public String getBankName(){
 		return bankName;
 	}
+	public double getBalance(){
+		return balance;
+	}
 	
-	//constructor method
-	public Account(String an, String on, String bn, double q, int id){
-	    accname = an;
-	    ownerName = on;
-	    bankName = bn;
-	    quantity = q;
-	    idNumber = id;
+	// constructor
+	public Account(int id, String accn, String ownern, String bankn, double initialDeposit){
+		idNumber = id;
+		accname = acc; // unnecessary???
+		ownerName = ownern;
+		bankName = bankn;
+		balance = initialDeposit;
+	}
+	// default constructor
+	public Account(int id, String accn, String ownern, String bankn){
+		idNumber = id;
+		accname = acc; // unnecessary???
+		ownerName = ownern;
+		bankName = bankn;
+		balance = 0.0;
 	}
 
-	
 }
