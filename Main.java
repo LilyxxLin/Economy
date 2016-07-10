@@ -8,7 +8,7 @@ public class Main {
     lily.buy (BearNecessities, "Carrot", 50, null, null); //toString: lily (uses cash) buys 50 carrots from BearNecessity (reveices cash)
     Account lucasAcc1 = lucas.openAccount (TompkinsTrustCompany, "LucasAcc1", 100);
     alice.buy (lily, "Book", 2, aliceAccount1, null, aliceAcc1);  // should return error message...
-    lucas.deposit (lucasAcc1, 300); //toString should print out the current account
+    lucas.deposit (lucasAcc1, 300); //toString should print out amount of money before and after deposit
     
     
     
