@@ -30,8 +30,12 @@ public class Thing{
 		this.quantity += quantityChanged;
 	}
 	
-	public void printThingStatus(){
+	public void printThingStatusInitial(){
 		System.out.println(this.quantity + " " + this.name + ". Each " + this.name + " is worth " + this.getPrice());
+	}
+	
+	public void printThingStatus(){
+		System.out.println(this.quantity + " " + this.name + ".");
 	}
 
 }
