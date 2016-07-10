@@ -28,7 +28,7 @@ public class Shop extends CanBuy {
 	}
 	
 	public void printShopStatus(){
-		System.out.println(this.getName + " has " + this.getCash + " of cash.");
+		System.out.println(this.getName() + " has " + this.getCash() + " of cash.");
 		System.out.println("Shop " + this.getName() + " has the following things:");
 		for (int i = 0; i < thingArray.length; i++){
 			thingArray[i].printThingStatusInitial();
