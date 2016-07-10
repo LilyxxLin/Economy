@@ -1,4 +1,4 @@
-package WorldEconomy;
+package worldEconomy;
 
 public class Account {
 	private int idNumber;
@@ -15,11 +15,7 @@ public class Account {
 		this.balance = initialDeposit;
 	}
 	public Account(int id, String accn, String ownern, String bankn){ // default constructor
-		this.idNumber = id;
-		this.accName = accn;
-		this.ownerName = ownern;
-		this.bankName = bankn;
-		this.balance = 0.0;
+		this(id, accn, ownern, bankn, 0.0);
 	}
 
 	public int getIDNumber(){ //accessor
@@ -36,6 +32,10 @@ public class Account {
 	}
 	public double getBalance(){
 		return this.balance;
+	}
+	
+	public void changeBalance(double quantity){
+		this.balance += quantity;
 	}
 	
 	public void transferTo(Account toAcc, double quantity){

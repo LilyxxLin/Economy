@@ -1,12 +1,11 @@
-package WorldEconomy;
+package worldEconomy;
 
 public class Car extends Thing{
   
+	private static final double PRICE = 300;
   
 //constructor
   public Car(Double quantity){
-    super.name = "Car";
-    super.price = 300;
-    super.quantity = quantity;
+	  super ("Car", PRICE , quantity);
   }
 }

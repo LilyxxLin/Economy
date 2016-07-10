@@ -1,37 +1,28 @@
-package WorldEconomy;
+package worldEconomy;
 
 import java.util.ArrayList;
 
-public class Shop extends Entity {
+public class Shop extends CanBuy {
 	private static int totalNumShop = 0;
 	//private String name; inherited from Entity
-	private ArrayList<Thing> thingArray; // what about an arrayList of an arrayList???
+	private Thing[] thingArray;
 	//private double totalAsset; // money or money+thing*Price
-	private Account shopAcc;
+	private ArrayList<Account> accountArray; // account has money
+
 	
 	//constructor
 	public Shop(String shopName){ // if we only want one shop this is what it should look like??
-	    super.name = shopName;
-	    Car cars = new Car(2);
-	    Book books = new Book(20);
-	    Carrot carrots = new Carrot(100);
-	    thingArray. add(cars,books,carrots);
-	    shopAcc = new Account ()
+		super(shopName, 0.0);
+		thingArray = new Thing[Thing.DICTIONARY.length];
+		thingArray[0] = new Car(2.0);
+		thingArray[1] = new Book(20.0);
+		thingArray[2] = new Carrot(100.0);
+		// open account method and add an account in to the arrayList
 		totalNumShop++;
 	}
-	//accesor methods
-	public ArrayList<Thing> getThingArray(){
+	//accessor methods
+	public Thing[] getThingArray(){
 		return thingArray;
 	}
 	
-	public boolean enoughItem(String thing, double quantity){
-		int itemIndex = super.getItemIndex (thing);
-		if (itemIndex>=0){  // if the item is found
-			return Thing[itemIndex].getQuantity()>=quantity;
-		}else { // if getItemIndex returns -1;
-			System.out.println(this.getName()+ " does not have the item that you are looking for... sorry :(");
-			return false; // or prompt the user to retype???
-		}
-	}
-
 }
