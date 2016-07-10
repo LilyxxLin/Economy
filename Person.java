@@ -19,7 +19,7 @@ public class Person extends CanBuy{
 		thingArray[0] = new Car(0.0);
 		thingArray[1] = new Book(0.0);
 		thingArray[2] = new Carrot(0.0);
-		System.out.println("Person " + getName() + " is created :)");
+		System.out.println("A person " + getName() + " is created :)");
 		numPeople++;
 	}
 
