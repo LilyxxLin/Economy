@@ -11,7 +11,7 @@ public class Shop extends Entity {
 	//constructor
 	public Shop(String shopName){ // if we only want one shop this is what it should look like??
 	    super.name = shopName;
-	    Car cars = new Car(10);
+	    Car cars = new Car(2);
 	    Book books = new Book(20);
 	    Carrot carrots = new Carrot(100);
 	    thingArray. add(cars,books,carrots);
