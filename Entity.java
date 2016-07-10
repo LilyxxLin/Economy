@@ -17,7 +17,7 @@ public abstract class Entity implements Transactionable{ // abstract because we 
 		Entity("", 0.0);
 	}
 
-	public int getThingIndex (String s){ //returns index that corresponds to the string, and -1 if not found
+	public int getThingIndex(String s){ //returns index that corresponds to the string, and -1 if not found
 		for (int i = 0; i < DICTIONARY.length; i++)
 			if(s[i].toLowerCase().equals(s))
 				return i;
@@ -35,8 +35,8 @@ public abstract class Entity implements Transactionable{ // abstract because we 
 	public void changeCash(double amount){
 		this.cash += amount;
 	}
-	public void exchangeItem(String thing, double quantity){
-		int itemIndex = super.getItemIndex (thing);
-		this.Thing[itemIndex].changeQuantity(double quantity)
+	public void changeThingQuantity(String thing, double quantityChanged){
+		int thingIndex = super.getThingIndex(thing);
+		this.Thing[thingIndex].changeQuantity(double quantity);
 	}
 }
