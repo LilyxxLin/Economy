@@ -27,7 +27,7 @@ public class Account {
 	// constructor
 	public Account(int id, String accn, String ownern, String bankn, double initialDeposit){
 		idNumber = id;
-		accname = acc; // unnecessary???
+		accname = accn; // unnecessary???
 		ownerName = ownern;
 		bankName = bankn;
 		balance = initialDeposit;
@@ -35,7 +35,7 @@ public class Account {
 	// default constructor
 	public Account(int id, String accn, String ownern, String bankn){
 		idNumber = id;
-		accname = acc; // unnecessary???
+		accname = accn; // unnecessary???
 		ownerName = ownern;
 		bankName = bankn;
 		balance = 0.0;
