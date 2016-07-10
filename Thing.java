@@ -31,7 +31,7 @@ public class Thing{
 	}
 	
 	public void printThingStatus(){
-		System.out.println(this.quantity + " " + this.getName() + ". Each " + this.getName() + " is worth " + this.getPrice());
+		System.out.println(this.quantity + " " + this.name + ". Each " + this.name + " is worth " + this.getPrice());
 	}
 
 }
