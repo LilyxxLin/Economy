@@ -60,14 +60,23 @@ public class Person extends Entity{
 	}
 	
 	public void deposit (Account accname, double quantity){ // what is the appropriate return type?
+		if (this.cash >= quantity){
 		accname.changeBalance(quantity);
+		this.changeCash(quantity*-1);
+		}else
+			System.out.println("Amount attempted to be deposited exceeds cash.");
+		
 	}
 	
 	public void withdraw(Account accname, double quantity){
 		if(accname.getBalance - quantity) < 0)
 			System.out.println("Amount attempted to be withdrawn exceeds balance");
-		else
+		else{
 			accname.changeBalance(quantity * -1);//What is the appropriate return type>>
+			this.changeCash(quantity);
+		}
+			
+		
 		
 	}
 	
