@@ -7,6 +7,7 @@ public class Shop extends Entity {
 	//private String name; inherited from Entity
 	private ArrayList<Thing> thingArray; // what about an arrayList of an arrayList???
 	//private double totalAsset; // money or money+thing*Price
+	private Account shopAcc;
 	
 	//constructor
 	public Shop(String shopName){ // if we only want one shop this is what it should look like??
@@ -15,6 +16,7 @@ public class Shop extends Entity {
 	    Book books = new Book(20);
 	    Carrot carrots = new Carrot(100);
 	    thingArray. add(cars,books,carrots);
+	    shopAcc = new Account ()
 		totalNumShop++;
 	}
 	//accesor methods
