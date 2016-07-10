@@ -6,7 +6,7 @@ public class Car extends Thing{
 //constructor
   public Car(Double quantity){
     super.name = "Car";
-    super.price = 200;
+    super.price = 300;
     super.quantity = quantity;
   }
 }
