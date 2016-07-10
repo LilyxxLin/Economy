@@ -41,18 +41,15 @@ public class Person extends Entity{
 	
 	
 	//buy() method
-	public void buy(Entity from, String thingType, double quantity, Account accname){ //if accname == null then cash
+	public void buy(Entity from, String thingType, double quantity, Account buyerAccName, Account sellerAccName){ //if accname == null then cash
 		
-		if(enoughItem(thingType, quantity) && enoughMoney(accname, quantity))
-		{
+		if(enoughItem(thingType, quantity) && enoughMoney(buyerAccName, thingType, quantity)){
 			int pricePaid = quantity * thingArray[getItemIndex(thingType)].getPrice();
-			if(accname == null)
-			{
+			if(buyerAccName == null && sellerAccName == null){
 				this.changeCash(pricePaid*-1);
-				from.changeCash(pricePaid)
-			}	
-			else //catch exception if accname is not valid
-			{
+				from.changeCash(pricePaid);
+			}
+			else{ //catch exception if accname is not valid
 				this.withdraw(pricePaid);
 				from.deposit(pricePaid);
 			}
@@ -74,9 +71,10 @@ public class Person extends Entity{
 		
 	}
 	
-	public void openAccount (Bank bankname, String accname, double initialDeposit){
-		Account newAcc = bankname.createAccount(accname, this.getName(), initialDeposit);
+	public Account openAccount(Bank bankName, String accname, double initialDeposit){
+		Account newAcc = bankName.createAccount(accName, this.getName(), initialDeposit);
 		this.accountArray.add(newAcc);
+		return newAcc;
 	}
 	
 }
