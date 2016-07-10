@@ -16,6 +16,7 @@ public class Bank extends Entity{  //implements Account??  // implements transac
 	public Bank(String bankName, double cash){
 		super(bankName, cash);
 		// 10 subject to change: I said 10 just so that we can test the program when we run out of account numbers
+		System.out.println(bankName + " has been created.");
 		
 	}
 	
