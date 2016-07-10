@@ -7,7 +7,5 @@ public class Car extends Thing{
 //constructor
   public Car(Double quantity){
 	  super ("Car", PRICE , quantity);
-	  System.out.println(quantity + " cars has been created. Each car is worth " + PRICE + "dollars.");
-
   }
 }
