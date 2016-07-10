@@ -1,7 +1,7 @@
 package WorldEconomy;
 import java.util.ArrayList;
 
-public abstract class Entity{ // abstract because we never want to instantiate this class
+public abstract class Entity implements Transactionable{ // abstract because we never want to instantiate this class
 	private String name;
 	//private double totalAsset;
 	private double cash;
