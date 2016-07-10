@@ -55,14 +55,16 @@ public class Person extends Entity{
 			}
 			from.exchangeItem(thingType, -quantity);  // these two lines change the quantity of the item of the buyer and seller;
 			this.exchangeItem(thingType, quantity); // ps. money has to be exchanged successfully before item is exchanged
+			System.out.println(getName() + " bought " + thingType + quantity + " from " + from.getName());
 		}else
 			System.out.println("Error. Transaction could not be processed. Please try again!")
 	}
 	
 	public void deposit (Account accname, double quantity){ // what is the appropriate return type?
 		if (this.cash >= quantity){
-		accname.changeBalance(quantity);
-		this.changeCash(quantity*-1);
+			accname.changeBalance(quantity);
+			this.changeCash(quantity*-1);
+			System.out.println("You deposited " + quantity + " dollars").
 		}else
 			System.out.println("Amount attempted to be deposited exceeds cash.");
 		
@@ -74,6 +76,7 @@ public class Person extends Entity{
 		else{
 			accname.changeBalance(quantity * -1);//What is the appropriate return type>>
 			this.changeCash(quantity);
+			System.out.println("You withdrew " + quantity + " dollars").
 		}
 			
 		
@@ -84,6 +87,7 @@ public class Person extends Entity{
 		Account newAcc = bankName.createAccount(accName, this.getName(), initialDeposit);
 		this.accountArray.add(newAcc);
 		return newAcc;
+		System.out.println("A new account " + accname + " has been created in " + bankName);
 	}
 	
 }
