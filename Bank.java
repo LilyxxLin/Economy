@@ -31,7 +31,7 @@ public class Bank extends Entity{  //implements Account??  // implements transac
 	    	    Account newAcc = new Account (id, accname, ownername, bankname, quantity);
 	    	    accountArray.add(newAcc); //add this new account to the 
 	    	    //customers.add(this) do we want this method??
-	    	    System.out.println("A new account " + accname + " has been created at bank " + getName());
+	    	    System.out.println(ownername + "created a new account " + accname + " at " + getName());
 	    	    numAccounts++;
     	    return newAcc;
 	    }
