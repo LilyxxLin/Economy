@@ -32,5 +32,6 @@ public class Shop extends CanBuy {
 		for (int i = 0; i < thingArray.length; i++){
 			thingArray[i].printThingStatusInitial();
 		}
+		System.out.println("");
 	}
 }
