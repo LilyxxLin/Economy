@@ -4,11 +4,11 @@ public class Main{
 	public static void main (String[] args){
 		try {
 			// setup
+			Shop nasties = new Shop("Bear Necessities");
+			Shop cornellstore = new Shop("Cornell Store");
 			Person alice = new Person("Alice", 1000);
 			Person lucas = new Person("Lucas", 1000);
 			Person lily = new Person("Lily", 1000);
-			Shop nasties = new Shop("Bear Necessities");
-			Shop cornellstore = new Shop("Cornell Store");
 			Bank tompkins = new Bank("Tompkins Trust Company", 10000.0);
 			Bank boa = new Bank("Bank of America", 50000.0);
 			
