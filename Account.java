@@ -8,32 +8,31 @@ public class Account {
 
 	// constructor
 	public Account(int id, String accn, String ownern, String bankn, double initialDeposit){
-		idNumber = id;
-		ownerName = ownern;
-		bankName = bankn;
-		balance = initialDeposit;
+		this.idNumber = id;
+		this.ownerName = ownern;
+		this.bankName = bankn;
+		this.balance = initialDeposit;
 	}
 	// default constructor
 	public Account(int id, String accn, String ownern, String bankn){
-		idNumber = id;
-		ownerName = ownern;
-		bankName = bankn;
-		balance = 0.0;
+		this.idNumber = id;
+		this.ownerName = ownern;
+		this.bankName = bankn;
+		this.balance = 0.0;
 	}
 
 	//accessors
 	public int getIDNumber(){
-		return idNumber
+		return this.idNumber
 	}
-
 	public String getOwnerName(){
-		return ownerName;
+		return this.ownerName;
 	}
 	public String getBankName(){
-		return bankName;
+		return this.bankName;
 	}
 	public double getBalance(){
-		return balance;
+		return this.balance;
 	}
 
 }
