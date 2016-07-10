@@ -25,7 +25,7 @@ public class CanBuy extends Entity{
 		if (this.getCash() >= quantity){
 			accname.changeBalance(quantity); 
 			this.changeCash(quantity*-1);
-			System.out.println(this.getName() + " deposited " + quantity + " dollars to" + accname.getName());
+			System.out.println(this.getName() + " deposited " + quantity + " dollars to" + accname.getAccName());
 		}else
 			System.out.println("Amount attempted to be deposited exceeds cash.");
 		
