@@ -19,13 +19,16 @@ public class Person extends CanBuy{
 		thingArray[0] = new Car(0.0);
 		thingArray[1] = new Book(0.0);
 		thingArray[2] = new Carrot(0.0);
+		System.out.println("Person " + name + " is created :)");
 		numPeople++;
 	}
 
 
 	public void buy(CanBuy from, String thingStr, double quantity, Account buyerAccName, Account sellerAccName){ //if accname == null then cash
 		double pricePaid = quantity * thingArray[Thing.getIndex(thingStr)].getPrice();
-		
+		System.out.println(getName() " wants to buy " + quantity + thingStr + " from " + from.getName());
+		this.enoughItem(thingStr, quantity);
+		this.enoughMoney(buyerAccName, pricePaid);// these two lines are used to print out the error message
 		if(enoughItem(thingStr, quantity) && enoughMoney(buyerAccName, pricePaid)){
 			if(buyerAccName == null && sellerAccName == null){
 				this.changeCash(pricePaid*-1);
@@ -37,17 +40,25 @@ public class Person extends CanBuy{
 			int index = Thing.getIndex(thingStr);
 			this.thingArray[index].changeQuantity(quantity);
 			from.thingArray[index].changeQuantity(-quantity);
-			System.out.println(getName() + " bought " + thingStr + quantity + " from " + from.getName());
+			System.out.println("Transaction succeeded!");
 		}else
-			System.out.println("Error. Transaction could not be processed. Please try again!");
+			System.out.println("Transaction failed due to insufficient money or thing.");
 	}
 
 
 	public boolean enoughMoney(Account accname, double quantity){ // if accname==null, the check cash
-		if (accname == null){  // can do this/?
-			return super.getCash() >= quantity;
-		} else{  // find the account; return exception if account not; then compare the amount in the account
-			return accname.getBalance()>=quantity;
+		if (accname == null){
+			if (super.getCash()<quantity){
+				System.out.println(this.getName() + " does not have enough cash for the transaction.");
+				return false;
+			}else
+				return true;
+		} else{
+			if (accname.getBalance()<quantity){
+				System.out.println(this.getName() + " does not have enough money in the account.");
+				return false;
+			}else
+				return true;
 		}
 	}
 	
