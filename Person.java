@@ -25,11 +25,11 @@ public class Person extends CanBuy{
 
 
 	public void buy(CanBuy from, String thingStr, double quantity, Account buyerAccName, Account sellerAccName){ //if accname == null then cash
+		if(enoughItem(thingStr, quantity) && enoughMoney(buyerAccName, quantity * thingArray[Thing.getIndex(thingStr)].getPrice())){
 		double pricePaid = quantity * thingArray[Thing.getIndex(thingStr)].getPrice();
 		System.out.println(getName() + " wants to buy " + quantity + thingStr + " from " + from.getName());
 		this.enoughItem(thingStr, quantity);
 		this.enoughMoney(buyerAccName, pricePaid);// these two lines are used to print out the error message
-		if(enoughItem(thingStr, quantity) && enoughMoney(buyerAccName, pricePaid)){
 			if(buyerAccName == null && sellerAccName == null){
 				this.changeCash(pricePaid*-1);
 				from.changeCash(pricePaid);
