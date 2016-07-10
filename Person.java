@@ -19,14 +19,14 @@ public class Person extends CanBuy{
 		thingArray[0] = new Car(0.0);
 		thingArray[1] = new Book(0.0);
 		thingArray[2] = new Carrot(0.0);
-		System.out.println("Person " + name + " is created :)");
+		System.out.println("Person " + getName() + " is created :)");
 		numPeople++;
 	}
 
 
 	public void buy(CanBuy from, String thingStr, double quantity, Account buyerAccName, Account sellerAccName){ //if accname == null then cash
 		double pricePaid = quantity * thingArray[Thing.getIndex(thingStr)].getPrice();
-		System.out.println(getName() " wants to buy " + quantity + thingStr + " from " + from.getName());
+		System.out.println(getName() + " wants to buy " + quantity + thingStr + " from " + from.getName());
 		this.enoughItem(thingStr, quantity);
 		this.enoughMoney(buyerAccName, pricePaid);// these two lines are used to print out the error message
 		if(enoughItem(thingStr, quantity) && enoughMoney(buyerAccName, pricePaid)){
