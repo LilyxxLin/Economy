@@ -45,5 +45,11 @@ public class Account {
 			this.balance -= quantity; // password??? method changeBalance()
 			toAcc.balance += quantity;
 		}
+		System.out.println(quantity + "dollars were transferred from " + this.getName()+ " to " + toAcc.getName());
+	}
+	
+	public void printAccountStatus(){
+		System.out.println(this.getAccName() + " of " + this.getBankName() 
+		+ "(id: " + id + ") currently has " + balance + " dollars in it.");
 	}
 }
