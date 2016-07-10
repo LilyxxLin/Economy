@@ -29,5 +29,9 @@ public class Thing{
 	public void changeQuantity(double quantityChanged){
 		this.quantity += quantityChanged;
 	}
+	
+	public void printThingStatus(){
+		System.out.println(this.quantity + " " + this.getName() + ". Each " + this.getName() + " is worth " + this.getPrice());
+	}
 
 }
