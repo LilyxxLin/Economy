@@ -20,6 +20,7 @@ public class Person extends CanBuy{
 		thingArray[1] = new Book(0.0);
 		thingArray[2] = new Carrot(0.0);
 		System.out.println("A person " + getName() + " is created :)");
+		printPersonStatus();
 		numPeople++;
 	}
 
@@ -72,5 +73,13 @@ public class Person extends CanBuy{
 				return false; // or prompt the user to retype???
 			}
 		}
+	}
+	
+	public void printPersonStatus(){
+		System.out.println(this.getName + " has " + this.getCash + " of cash.");
+		for (int i = 0; i < thingArray.length; i++){
+			thingArray[i].printThingStatus();
+		}
+		
 	}
 }
