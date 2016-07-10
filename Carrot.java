@@ -6,7 +6,5 @@ public class Carrot extends Thing{
 //constructor
   public Carrot(Double quantity){
 	  super ("Carrot",PRICE, quantity);
-	  System.out.println(quantity + " carrots has been created. Each carrot is worth " + PRICE + "dollars.");
-
   }
 }
