@@ -9,8 +9,8 @@ public class Shop extends Entity {
 	//private double totalAsset; // money or money+thing*Price
 	
 	//constructor
-	public Shop(){ // if we only want one shop this is what it should look like??
-	    super.name = "The Awesome Shop!!";
+	public Shop(String shopName){ // if we only want one shop this is what it should look like??
+	    super.name = shopName;
 	    Car cars = new Car(10);
 	    Book books = new Book(20);
 	    Carrot carrots = new Carrot(100);
