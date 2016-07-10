@@ -18,6 +18,7 @@ public class Shop extends CanBuy {
 		thingArray[1] = new Book(20.0);
 		thingArray[2] = new Carrot(100.0);
 		// open account method and add an account in to the arrayList
+		System.out.println(shopName + " has been created!");
 		totalNumShop++;
 	}
 	//accessor methods
