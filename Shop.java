@@ -30,7 +30,7 @@ public class Shop extends CanBuy {
 	public void printShopStatus(){
 		System.out.println("Shop " + this.getName() + " has the following things:");
 		for (int i = 0; i < thingArray.length; i++){
-			thingArray[i].printThingStatus();
+			thingArray[i].printThingStatusInitial();
 		}
 	}
 }
