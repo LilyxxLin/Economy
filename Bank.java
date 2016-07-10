@@ -33,10 +33,11 @@ public class Bank extends Entity{  //implements Account??  // implements transac
 	public Account createAccount(String accname, String ownername, double quantity){
 	    String bankname = this.getName();
 	    if (numAccounts< ACCOUNTNOS.length){
-    	    int id = ACCOUNTNOS[numAccounts]; 
-    	    Account newAcc = new Account (accname, ownername, bankname, quantity, id);
-    	    accountArray.add(newAcc); //add this new account to the 
-    	    //customers.add(this) do we want this method??
+	    	    int id = ACCOUNTNOS[numAccounts]; 
+	    	    Account newAcc = new Account (accname, ownername, bankname, quantity, id);
+	    	    accountArray.add(newAcc); //add this new account to the 
+	    	    //customers.add(this) do we want this method??
+	    	    System.out.println("A new account " + accname + " has been created at bank " + getName());
     	    return newAcc;
 	    }
 	    else{
