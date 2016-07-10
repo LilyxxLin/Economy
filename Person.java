@@ -80,6 +80,6 @@ public class Person extends CanBuy{
 		for (int i = 0; i < thingArray.length; i++){
 			thingArray[i].printThingStatus();
 		}
-		
+		System.out.println("");
 	}
 }
