@@ -76,7 +76,7 @@ public class Person extends CanBuy{
 	}
 	
 	public void printPersonStatus(){
-		System.out.println(this.getName + " has " + this.getCash + " of cash.");
+		System.out.println(this.getName() + " has " + this.getCash() + " of cash.");
 		for (int i = 0; i < thingArray.length; i++){
 			thingArray[i].printThingStatus();
 		}
