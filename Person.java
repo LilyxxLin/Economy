@@ -80,6 +80,12 @@ public class Person extends CanBuy{
 		for (int i = 0; i < thingArray.length; i++){
 			thingArray[i].printThingStatus();
 		}
+		if(accountArray.size()>0){
+			System.out.println(this.getName() + " has the following account(s):");
+			for (int i = 0; i<accountArray.size(); i++){
+				accountArray.get(i).printAccountStatus();
+			}
+		}
 		System.out.println("");
 	}
 }
