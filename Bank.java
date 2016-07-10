@@ -2,7 +2,7 @@ package worldEconomy;
 import java.util.ArrayList;
 
 public class Bank extends Entity{  //implements Account??  // implements transactions
-	private static final int[] ACCOUNTNOS = new int[10];
+	private static final int[] ACCOUNTNOS = new int[3];
 	
 	static { // method run at compile time, hence no name or input
 		for(int i = 0; i < ACCOUNTNOS.length; i++)
